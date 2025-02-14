@@ -1,4 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 
 .HomePage{
-  background-color: red;
+  width: 100%;
+
+  .Header{
+    width: 100%;
+  }
+
+  .ApoieaOSB{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: linear-gradient(to bottom, #16243d, #000000);
+
+    button{
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+  }
+
+  .AboutSection{
+    width: 100%;
+    display: flex;
+  }
+
 }

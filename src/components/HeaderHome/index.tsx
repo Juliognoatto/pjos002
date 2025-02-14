@@ -1,3 +1,4 @@
+import styles from '../../styles/components/HeaderHome.module.scss'
 
 interface HeaderProps {
   scrollToSection: (elementRef: React.RefObject<HTMLDivElement>) => void;
@@ -14,16 +15,18 @@ interface HeaderProps {
 function HeaderHome({ scrollToSection, refs }: HeaderProps) {
 
   return(
-      <header>
+      <header className={styles.Header}>
         <nav>
-          <button onClick={() => scrollToSection(refs.aboutRef)}>sobre</button>
-          <button onClick={() => scrollToSection(refs.projectsRef)}>Projetos</button>
-          <button onClick={() => scrollToSection(refs.recognitionRef)}>Reconhecimento</button>
-          <button onClick={() => scrollToSection(refs.disksRef)}>Discos</button>
-          <button onClick={() => scrollToSection(refs.contactRef)}>Contato</button>
+          <div className={styles.NavContainer}>
+            <button onClick={() => scrollToSection(refs.aboutRef)}>sobre</button>
+            <button onClick={() => scrollToSection(refs.projectsRef)}>Projetos</button>
+            <button onClick={() => scrollToSection(refs.recognitionRef)}>Reconhecimento</button>
+            <button onClick={() => scrollToSection(refs.disksRef)}>Discos</button>
+            <button onClick={() => scrollToSection(refs.contactRef)}>Contato</button>
+          </div>
         </nav>
-        <div>
-          <img src="" alt="imgens passando" />
+        <div className={styles.Slider}>
+          <img src="/header.svg" alt="imgens passando" />
         </div>
       </header>
   )

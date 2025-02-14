@@ -3,3 +3,9 @@
   margin: 0;
  }
  
+ @mixin flex-center($direction: column, $display: flex, $align: center, $justify: center) {
+  display: $display;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}

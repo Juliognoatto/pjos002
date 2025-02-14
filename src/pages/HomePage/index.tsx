@@ -1,6 +1,7 @@
 import styles from "../../styles/pages/HomePage.module.scss"
 import HeaderHome from "../../components/HeaderHome"
 import { useRef } from 'react';
+import About from "../../components/About";
 
 
 function HomePage() {
@@ -22,9 +23,17 @@ function HomePage() {
 
   return(
     <main className={styles.HomePage}>
-      <header>
+      <header className={styles.Header}>
         <HeaderHome scrollToSection={scrollToSection} refs={{ projectsRef, aboutRef, recognitionRef, disksRef, contactRef }}/>
       </header>
+      
+      <section className={styles.ApoieaOSB}>
+        <button>Apoie a OSB</button>
+      </section>
+
+      <section className={styles.AboutSection}>
+        <About/>
+      </section>
     </main>
   )
 }
